@@ -1,0 +1,74 @@
+﻿<Window x:Class="WpfApp18888.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp18888"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FFF9BEFF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button 
+            Content="Open" 
+                HorizontalAlignment="Left"
+                Margin="59,0,0,0"
+                VerticalAlignment="Top" 
+                RenderTransformOrigin="0.511,0.534"
+                Height="2" 
+                Width="104" 
+                Click="Button_Click"
+            Background="Black" 
+            Foreground="White"
+            FontWeight="Bold"
+                >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Write" 
+                x:Name="WriteBTN"
+                  
+                HorizontalAlignment="Left" 
+                Margin="506,363,0,0"
+                VerticalAlignment="Top" 
+                Height="23" 
+                Width="118" 
+                Click="Button_Click_1"
+                Foreground="Black"
+                Background="#FF7765FF"
+                FontWeight="Bold"
+                />
+        <TextBox 
+            x:Name="TextVstup"
+            HorizontalAlignment="Left"
+                 Margin="452,79,0,0"
+                 TextWrapping="Wrap"
+                  Background="Black"
+                 Text=""
+            TextChanged="TextVstup_TextChanged"
+                 VerticalAlignment="Top"
+                 Width="213" 
+                 Height="247" Foreground="White"/>
+        <TextBlock 
+             x:Name="TextVystup"
+            HorizontalAlignment="Left" 
+                   Margin="108,74,0,0" 
+                   TextWrapping="Wrap" 
+                   Text="" 
+                   VerticalAlignment="Top" 
+                   Background="#FF8B58FF"
+                   Height="247" 
+                   Width="209" Foreground="Black"/>
+
+    </Grid>
+</Window>
