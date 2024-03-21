@@ -64,7 +64,8 @@ namespace WpfApp18888
             string datum = DateTime.Now.ToString("dd/MM/yyyy-HH:mm:ss");
             using (StreamWriter sw = new StreamWriter(path, true))
             {
-                sw.Write($"{vstup} - {datum}\n");
+                sw.WriteLine(vstup);
+                sw.WriteLine(datum);
             }
             TextVstup.Text = "";
             precist(path);
